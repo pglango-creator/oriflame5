@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Haul Mis Favoritos · Perfumes</title>
+
+<style>
+body{
+  margin:0;
+  font-family:'Segoe UI',sans-serif;
+  background:linear-gradient(180deg,#1c1b2e 0%, #2a1f3d 40%, #3a2b4f 70%, #f6e9f2 100%);
+  color:#2b2b2b;
+}
+
+.container{
+  max-width:900px;
+  margin:auto;
+  padding:20px;
+}
+
+/* ===== HEADER ===== */
+header{
+  background:linear-gradient(160deg,#2b1f3a,#3b2a52);
+  border-radius:45px;
+  padding:50px 30px;
+  text-align:center;
+  margin-bottom:70px;
+  box-shadow:0 25px 60px rgba(0,0,0,0.35);
+}
+
+header h1{
+  font-size:44px;
+  margin:0;
+  font-weight:900;
+  letter-spacing:2px;
+  background:linear-gradient(90deg,#e6c2d4,#d4af37,#c9b9e8);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+.header-line{
+  width:160px;
+  height:5px;
+  margin:22px auto;
+  border-radius:5px;
+  background:linear-gradient(90deg,#d4af37,#e6c2d4,#c9b9e8);
+}
+
+header p{
+  font-size:18px;
+  color:#e6dff0;
+}
+
+/* ===== CARD PERFUME ===== */
+.card{
+  background:linear-gradient(180deg,#ffffff,#f7f1fb);
+  border-radius:42px;
+  padding:38px 28px 44px;
+  margin-bottom:55px;
+  position:relative;
+  box-shadow:0 20px 55px rgba(0,0,0,0.15);
+}
+
+.numero{
+  position:absolute;
+  top:-20px;
+  left:-20px;
+  background:linear-gradient(135deg,#c9b9e8,#d4af37);
+  color:#fff;
+  width:52px;
+  height:52px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-weight:900;
+  box-shadow:0 10px 25px rgba(0,0,0,0.25);
+}
+
+.product-img{
+  width:100%;
+  max-width:260px;
+  display:block;
+  margin:0 auto 28px;
+}
+
+h2{
+  text-align:center;
+  font-size:28px;
+  background:linear-gradient(90deg,#5a4a7a,#c9b9e8);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+.sub{
+  text-align:center;
+  font-style:italic;
+  margin-bottom:20px;
+  color:#666;
+}
+
+/* ===== CHIPS ===== */
+.chips{
+  display:flex;
+  justify-content:center;
+  gap:12px;
+  flex-wrap:wrap;
+  margin-bottom:22px;
+}
+
+.chip{
+  background:linear-gradient(135deg,#f3e9f4,#efe6fa);
+  padding:9px 18px;
+  border-radius:26px;
+  font-size:14px;
+  box-shadow:0 6px 16px rgba(0,0,0,0.08);
+}
+
+/* ===== LIST ===== */
+ul{
+  max-width:520px;
+  margin:20px auto;
+}
+
+ul li{
+  margin-bottom:8px;
+}
+
+/* ===== STARS ===== */
+.estrellas{
+  text-align:center;
+  color:#d4af37;
+  font-size:22px;
+  margin:22px 0;
+}
+
+/* ===== BOTONES ORIFLAME ===== */
+.btn{
+  display:block;
+  margin:30px auto 0;
+  width:max-content;
+  padding:16px 36px;
+  border-radius:42px;
+  color:#fff;
+  text-decoration:none;
+  font-weight:800;
+  box-shadow:0 12px 30px rgba(0,0,0,0.25);
+}
+
+.btn-oscuro{
+  background:linear-gradient(135deg,#1e1b2e,#3b2a52,#6a5a8a);
+}
+
+.btn-pasion{
+  background:linear-gradient(135deg,#7a0f1f,#b71c1c,#e53935);
+}
+
+.btn-premium{
+  background:linear-gradient(135deg,#f2c1d1,#d4af37,#c9b9e8);
+}
+
+/* ===== GANADOR ===== */
+.ganador{
+  border:3px solid #d4af37;
+  background:linear-gradient(180deg,#fffaf2,#f7ecff);
+}
+
+.ganador-badge{
+  text-align:center;
+  font-weight:900;
+  letter-spacing:1px;
+  color:#d4af37;
+  margin-bottom:10px;
+}
+
+/* ===== VEREDICTO ===== */
+.veredicto{
+  background:linear-gradient(180deg,#ffffff,#f4edf9);
+  border-radius:48px;
+  padding:45px 32px;
+  margin-top:70px;
+  box-shadow:0 22px 60px rgba(0,0,0,0.15);
+}
+
+.veredicto h2{
+  text-align:center;
+  font-size:32px;
+  background:linear-gradient(90deg,#c9b9e8,#d4af37,#e6c2d4);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+.veredicto p{
+  max-width:740px;
+  margin:18px auto;
+  font-size:16px;
+  line-height:1.7;
+  text-align:center;
+}
+
+.veredicto .final{
+  margin-top:26px;
+  font-style:italic;
+  color:#555;
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+
+<header>
+  <h1>🌸 HAUL MIS FAVORITOS · PERFUMES ✨</h1>
+  <div class="header-line"></div>
+  <p>Mis perfumes favoritos · carácter, presencia y piel que habla</p>
+</header>
+
+<!-- PERFUME 1 -->
+<div class="card">
+  <span class="numero">1</span>
+  <img src="perfume1.jpg" class="product-img">
+
+  <h2>Divine Dark Velvet</h2>
+  <p class="sub">La noche en versión glamour</p>
+
+  <div class="chips">
+    <div class="chip">🖤 Floral oscuro gourmand</div>
+    <div class="chip">🌙 Noche</div>
+    <div class="chip">✨ Glamour</div>
+    <div class="chip">👑 Elegante</div>
+  </div>
+
+  <ul>
+    <li>Envolvente y aterciopelado</li>
+    <li>Rosa negra con fondo gourmand</li>
+    <li>Sensual sin ser empalagoso</li>
+  </ul>
+
+  <div class="estrellas">★★★★★ 5/5</div>
+
+  <a href="https://es.oriflame.com/products/product?code=46801&query=Divine&store=ES-patriciagalangomez" class="btn btn-oscuro" target="_blank">
+    🛍 Ver en Oriflame
+  </a>
+</div>
+
+<!-- PERFUME 2 -->
+<div class="card">
+  <span class="numero">2</span>
+  <img src="perfume2.jpg" class="product-img">
+
+  <h2>Love Potion Cherry on Top</h2>
+  <p class="sub">Seductor, jugoso y adictivo</p>
+
+  <div class="chips">
+    <div class="chip">🍒 Gourmand afrutado</div>
+    <div class="chip">💋 Sensual</div>
+    <div class="chip">🌙 Citas nocturnas</div>
+    <div class="chip">🔥 Afrodisíaco</div>
+  </div>
+
+  <ul>
+    <li>Cereza madura y trufa de chocolate</li>
+    <li>Dulce provocador</li>
+    <li>Perfume de piel y cercanía</li>
+  </ul>
+
+  <div class="estrellas">★★★★★ 5/5</div>
+
+  <a href="https://es.oriflame.com/products/product?code=46047&query=Cherry" class="btn btn-pasion" target="_blank">
+    ❤️ Ver en Oriflame
+  </a>
+</div>
+
+<!-- PERFUME 3 GANADOR -->
+<div class="card ganador">
+  <span class="numero">3</span>
+  <div class="ganador-badge">🏆 GANADOR ABSOLUTO</div>
+
+  <img src="perfume3.jpg" class="product-img">
+
+  <h2>All or Nothing Amplified</h2>
+  <p class="sub">Presencia. Poder. Declaración.</p>
+
+  <div class="chips">
+    <div class="chip">🌺 Floral ambarino intenso</div>
+    <div class="chip">👑 Presencia</div>
+    <div class="chip">💥 Impactante</div>
+    <div class="chip">🌙 Noche poderosa</div>
+  </div>
+
+  <ul>
+    <li>Llena la habitación</li>
+    <li>Dura hasta 10 horas</li>
+    <li>No pasa desapercibido</li>
+  </ul>
+
+  <div class="estrellas">★★★★★ 5/5</div>
+
+  <a href="https://es.oriflame.com/products/product?code=46060&query=Ampli&store=ES-patriciagalangomez" class="btn btn-premium" target="_blank">
+    ✨ Ver en Oriflame
+  </a>
+</div>
+
+<!-- VEREDICTO -->
+<div class="veredicto">
+  <h2>✨ Veredicto final</h2>
+  <p>
+    Este haul no va de perfumes suaves ni discretos.  
+    Va de presencia, de carácter y de piel con intención.
+  </p>
+  <p>
+    Tres estilos distintos, tres formas de expresarte…  
+    y un ganador que no pide permiso.
+  </p>
+  <p class="final">
+    El perfume no se explica. Se siente. Y estos se sienten de verdad.
+  </p>
+</div>
+
+</div>
+</body>
+</html>
